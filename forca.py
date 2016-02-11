@@ -5,7 +5,6 @@ from random import randrange
 from ui import *
 
 def joga():
-    pontos = 0
     jogo_da_forca()
 
 def jogo_da_forca():
@@ -14,7 +13,7 @@ def jogo_da_forca():
     imprime_mascara(palavra)
     chutes = []
     erros = 0
-    while(erros < 5):
+    while erros < 5:
         chute = pede_chute()
         if len(chute) > 1:
             if chute == palavra:
@@ -55,7 +54,6 @@ def palavra_mascarada(chutes, palavra):
             if indice != -1:
                 mascara += letra
                 break
-                break
         if indice == -1:
             mascara += '_'
     return mascara
@@ -68,7 +66,7 @@ def acertou(chute, palavra):
 
 def valida_chute(chute, chutes):
     while chute in chutes:
-        print('O caractere %s já foi chutado, tente outro:' % chute)
+        informa_chute_repetido(chute)
         chute = input()
     return chute
 

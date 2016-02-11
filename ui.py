@@ -30,3 +30,6 @@ def acertou_palavra(palavra):
 
 def errou_palavra(chute):
     print('Desculpe, a palavra não é %s' % chute)
+
+def informa_chute_repetido(chute):
+    print('O caractere %s já foi chutado, tente outro:' % chute)
