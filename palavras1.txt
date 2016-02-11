@@ -1,0 +1,14 @@
+desenvolvimento
+abap
+django
+java
+javascript
+jquery
+lua
+nodejs
+pascal
+php
+python
+rails
+ruby
+visual basic

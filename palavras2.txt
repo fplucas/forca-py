@@ -1,0 +1,17 @@
+frutas
+abacate
+abacaxi
+amora
+banana
+caqui
+figo
+framboesa
+jabuticaba
+laranja
+mamao
+manga
+melancia
+melao
+morango
+pera
+uva
