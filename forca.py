@@ -29,6 +29,7 @@ def jogo_da_forca():
             else:
                 erros = errou(chute_valido, erros)
             print(mascara)
+    informa_que_perdeu(nome)
 
 def obtem_arquivo():
     nome = ('palavras%s.txt' % (randrange(1, 4, 1)))

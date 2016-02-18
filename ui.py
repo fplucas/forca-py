@@ -3,9 +3,9 @@
 def da_boas_vindas():
     print('\n\n')
     print('Bem vindo ao jogo da forca. Qual é o seu nome?')
-    nome = input()
+    nome = input().capitalize()
     print('\n')
-    print('Seja bem vindo(a) %s. Vamos jogar!' % nome.capitalize())
+    print('Seja bem vindo(a) %s. Vamos jogar!' % nome)
     return nome
 
 def imprime_mascara(palavra):
@@ -41,3 +41,7 @@ def avisa_que_errou_palavra(palavra):
 def informa_chute_repetido(chute):
     print('\n')
     print('O caractere %s já foi chutado, tente outro:' % chute)
+
+def informa_que_perdeu(nome):
+    print('\n\n')
+    print('Desculpe %s, não foi dessa vez, tente novamente' % nome)
