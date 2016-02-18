@@ -20,16 +20,14 @@ def jogo_da_forca():
                 acertou_palavra(palavra)
                 quit()
             else:
-                errou_palavra(chute)
-                erros = erros + 1
+                erros = errou_palavra(chute, erros)
         else:
             chute_valido = valida_chute(chute, chutes)
             chutes.append(chute_valido)
-            if acertou:
+            if acertou(chute_valido, palavra):
                 mascara = palavra_mascarada(chutes, palavra)
             else:
-                errou(chute_valido)
-                erros = erros + 1
+                erros = errou(chute_valido, erros)
             print(mascara)
 
 def obtem_arquivo():
@@ -70,7 +68,12 @@ def valida_chute(chute, chutes):
         chute = input()
     return chute
 
-def errou(erros):
-    avisa_que_errou(erro)
+def errou(chute, erros):
+    avisa_que_errou(chute)
+    erros += 1
+    return erros
+
+def errou_palavra(palavra, erros):
+    avisa_que_errou_palavra(palavra)
     erros += 1
     return erros

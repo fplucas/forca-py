@@ -34,9 +34,9 @@ def acertou_palavra(palavra):
     print('\n')
     print('Parabéns, a palavra era %s' % palavra)
 
-def errou_palavra(chute):
+def avisa_que_errou_palavra(palavra):
     print('\n')
-    print('Desculpe, a palavra não é %s' % chute)
+    print('Desculpe, a palavra não é %s' % palavra)
 
 def informa_chute_repetido(chute):
     print('\n')
