@@ -27,10 +27,9 @@ def jogo_da_forca(nome):
         else:
             chute_valido = valida_chute(chute, chutes)
             chutes.append(chute_valido)
-            if acertou(chute_valido, palavra):
-                mascara = palavra_mascarada(chutes, palavra)
-            else:
+            if not acertou(chute_valido, palavra):
                 erros = errou(chute_valido, erros)
+            mascara = palavra_mascarada(chutes, palavra)
             print(mascara)
     if erros == 5:
         informa_que_perdeu(nome)
