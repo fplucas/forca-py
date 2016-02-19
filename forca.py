@@ -30,6 +30,7 @@ def jogo_da_forca(nome):
                 erros = errou(chute_valido, erros)
             mascara = palavra_mascarada(chutes, palavra)
             print(mascara)
+            desenha_boneco(erros)
     if erros == 5:
         informa_que_perdeu(nome)
     quer_jogar = jogar_novamente()

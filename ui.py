@@ -8,6 +8,31 @@ def da_boas_vindas():
     print('Seja bem vindo(a) %s. Vamos jogar!' % nome)
     return nome
 
+def desenha_boneco(erros):
+    cabeca = "   "
+    corpo = " "
+    pernas = "   "
+    bracos = "   "
+    if erros >= 1:
+        cabeca = '(_)'
+    if erros >= 2:
+        bracos = ' | '
+        corpo = '|'
+    if erros >= 3:
+        bracos = '\\|/'
+    if erros >= 4:
+        pernas = '/ \\'
+
+    print('  _______       ')
+    print(' |/      |      ')
+    print(' |      %s  ' % cabeca)
+    print(' |      %s  ' % bracos)
+    print(' |       %s     ' % corpo)
+    print(' |      %s   ' % pernas)
+    print(' |              ')
+    print('_|___           ')
+    print('\n\n')
+
 def imprime_mascara(palavra):
     mascara = ''
     for caractere in palavra:
