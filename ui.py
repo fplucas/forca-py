@@ -19,7 +19,7 @@ def pede_chute():
     print('Entre com um chute ou a palavra inteira:')
     chute = input()
     while not chute:
-        pede_chute()
+        chute = pede_chute()
     return chute
 
 def jogar_novamente():
