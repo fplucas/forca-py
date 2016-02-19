@@ -1,5 +1,5 @@
 # coding: utf-8
 
-from forca import jogo_da_forca
+from forca import joga
 
-jogo_da_forca()
+joga()

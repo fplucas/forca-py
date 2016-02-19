@@ -22,6 +22,15 @@ def pede_chute():
         pede_chute()
     return chute
 
+def jogar_novamente():
+    print('Deseja jogar novamente? (S/N)')
+    resposta = input().upper()
+    if resposta == 'S':
+        resposta = True
+    else:
+        resposta = False
+    return resposta
+
 def avisa_que_errou(erro):
     print('\n')
     print('Desculpe, a letra %s não se encontra na palavra sorteada' % erro)

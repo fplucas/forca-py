@@ -5,20 +5,23 @@ from random import randrange
 from ui import *
 
 def joga():
-    jogo_da_forca()
-
-def jogo_da_forca():
     nome = da_boas_vindas()
+    quer_jogar = True
+    while quer_jogar:
+        quer_jogar = jogo_da_forca(nome)
+
+def jogo_da_forca(nome):
     palavra = palavra_aleatoria()
     imprime_mascara(palavra)
     chutes = []
     erros = 0
-    while erros < 5:
+    continua_jogo = True
+    while erros < 5 and continua_jogo:
         chute = pede_chute()
         if len(chute) > 1:
             if chute == palavra:
                 acertou_palavra(palavra)
-                quit()
+                continua_jogo = False
             else:
                 erros = errou_palavra(chute, erros)
         else:
@@ -29,7 +32,10 @@ def jogo_da_forca():
             else:
                 erros = errou(chute_valido, erros)
             print(mascara)
-    informa_que_perdeu(nome)
+    if erros == 5:
+        informa_que_perdeu(nome)
+    quer_jogar = jogar_novamente()
+    return quer_jogar
 
 def obtem_arquivo():
     nome = ('palavras%s.txt' % (randrange(1, 4, 1)))
